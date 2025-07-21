@@ -1,0 +1,29 @@
+# Python cache and artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+*.env
+
+# IDE and editor configuration
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# --- Project Specific ---
+
+# Ignore large data files (audio)
+data/audios_development/
+data/audios_evaluation/
+
+# Ignore trained models, which can be large
+# The training script can regenerate them
+models/
