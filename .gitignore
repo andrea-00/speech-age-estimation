@@ -23,7 +23,15 @@ Thumbs.db
 # Ignore large data files (audio)
 data/audios_development/
 data/audios_evaluation/
+data/development_with_audio_features.csv
+data/development.csv
+data/sample_submission.csv
+data/submission.csv
+data/sample_submission.csv
 
 # Ignore trained models, which can be large
 # The training script can regenerate them
 models/
+
+# Ignore artifacts generated during the training process
+artifacts/
