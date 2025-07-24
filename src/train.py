@@ -45,7 +45,6 @@ def main():
     print("Caricamento dei dati di valutazione...")
     try:
         dev_df = pd.read_csv(DEVELOPMENT_PATH)
-        dev_df.columns = dev_df.columns.str.strip()
     except FileNotFoundError:
         print(F"ERRORE: {DEVELOPMENT_PATH} non trovato.")
         return
@@ -77,6 +76,7 @@ def main():
     ])
 
     final_pipeline_cleaned = Pipeline(steps=[
+        ('audio_feature_extractor', AudioFeatureExtractor(audio_dir=AUDIO_DIR)),
         ('tempo_cleaner', TempoCleaner(column_name='tempo')),
         ('feature_dropper', RedundantFeatureDropper(columns_to_drop=useless_audio_features)),
         ('rare_grouper', RareCategoryGrouper(columns=['ethnicity'], n_top_categories=10)), 

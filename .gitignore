@@ -28,10 +28,12 @@ data/development.csv
 data/sample_submission.csv
 data/submission.csv
 data/sample_submission.csv
+data/evaluation.csv
 
 # Ignore trained models, which can be large
 # The training script can regenerate them
 models/
+models/final_model.joblib
 
 # Ignore artifacts generated during the training process
 artifacts/
