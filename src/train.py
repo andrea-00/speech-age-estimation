@@ -90,9 +90,8 @@ def main():
     final_pipeline_cleaned.fit(X, y)
     print("Addestramento completato.")
 
-    model_filename = 'final_model.joblib'
-    joblib.dump(final_pipeline_cleaned, model_filename)
-    print(f"Modello finale salvato in '{model_filename}'")
+    joblib.dump(final_pipeline_cleaned, MODEL_PATH)
+    print(f"Modello finale salvato in '{MODEL_PATH}'")
 
 if __name__ == '__main__':
     main()
